@@ -1,6 +1,10 @@
 pipeline {
    agent any
 
+    tools { 
+        maven 'MAVEN'
+    }
+   
    environment {
      ORGANIZATION_NAME = "dindo-manondo"
      YOUR_DOCKERHUB_USERNAME = "dindo"
