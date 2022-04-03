@@ -21,13 +21,15 @@ pipeline {
       }
       stage('Build') {
          steps {
-            sh '''mvn clean package'''
+            // sh '''mvn clean package'''
+            echo "Maven building"
          }
       }
 
       stage('Build and Push Image') {
          steps {
-           sh 'docker image build -t ${REPOSITORY_TAG} .'
+           // sh 'docker image build -t ${REPOSITORY_TAG} .'
+            echo "Docker build and docker push"
          }
       }
 
